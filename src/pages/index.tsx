@@ -21,9 +21,9 @@ const Home: NextPage = () => {
 
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
-          Create <span className="text-purple-300">T3</span> App
+          <span className="text-purple-400">Hello from T3</span>
         </h1>
-        <p className="text-2xl text-gray-700">This stack uses:</p>
+        <p className="text-2xl text-purple-700">This stack uses:</p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-2 lg:w-2/3">
           <TechnologyCard
             name="NextJS"
