@@ -16,7 +16,7 @@ import Link from "next/link";
 import { colors, createTheme, ThemeProvider } from "@mui/material";
 import MobileMenu from "./MobileMenu";
 
-const pages = ["about", "Pricing", "Blog"];
+const pages = ["about", "services", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const theme = createTheme({
