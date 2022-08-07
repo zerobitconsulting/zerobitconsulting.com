@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 const About: NextPage = () => {
     return (
         <Typography variant="h1">
-            <Services></Services> 
+            Welcome to the Services page
         </Typography>
     )
 }

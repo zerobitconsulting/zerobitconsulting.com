@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { MouseEvent } from 'react';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,10 +14,9 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "next/link";
 import { colors, createTheme, ThemeProvider } from "@mui/material";
+import { pages } from "../helpers/AppStrings";
 import MobileMenu from "./MobileMenu";
 
-const pages = ["about", "services", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const theme = createTheme({
   palette: {
@@ -36,7 +35,7 @@ const MenuBar = () => {
   );
 
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = () => (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
  
@@ -49,7 +48,7 @@ const MenuBar = () => {
     <ThemeProvider theme={theme}>
       <AppBar position="sticky" color="secondary">
           <Toolbar disableGutters sx={{ justifyContent: "center"}}>
-         {/* <MobileMenu pages={pages} handleOpenNavMenu={handleOpenNavMenu} handleCloseNavMenu={handleCloseNavMenu}/> */}
+         <MobileMenu handleOpenNavMenu={handleOpenNavMenu} anchorElNav={anchorElNav} handleCloseNavMenu={handleCloseNavMenu}/>
             {/* this is the larger componet */}
             
             <Typography

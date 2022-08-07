@@ -1,8 +1,14 @@
 import { Typography, Box, IconButton, Menu, MenuItem } from "@mui/material";
 
 import MenuIcon from '@mui/icons-material/Menu';
+import { pages } from "../helpers/AppStrings";
 
-export default function MobileMenu(handleOpenNavMenu: () => void, anchorElNav: Element,  handleCloseNavMenu: () => void, pages: string[]) {
+interface IMobileMenuProps {
+  handleOpenNavMenu: () => void;
+  anchorElNav: HTMLElement | null;
+  handleCloseNavMenu: () => void;
+}
+const MobileMenu: React.FC<IMobileMenuProps > = ({handleOpenNavMenu, anchorElNav, handleCloseNavMenu }) => {
   return (
     <>
       <Typography
@@ -29,7 +35,7 @@ export default function MobileMenu(handleOpenNavMenu: () => void, anchorElNav: E
           aria-label="account of current user"
           aria-controls="menu-appbar"
           aria-haspopup="true"
-          onClick={handleOpenNavMenu}
+          onClickCapture={handleOpenNavMenu}
           color="inherit"
         >
           <MenuIcon />
@@ -62,3 +68,4 @@ export default function MobileMenu(handleOpenNavMenu: () => void, anchorElNav: E
     </>
   );
 }
+export default MobileMenu;
