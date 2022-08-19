@@ -21,47 +21,51 @@ import MobileMenu from "./MobileMenu";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#B6B6B6",
+      main: "#000000",
     },
     secondary: {
-      main: colors.red[500],
+      main: "#B6B6B6",
     },
   },
 });
 
 const MenuBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-
-  const handleOpenNavMenu = () => (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
- 
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="sticky" color="secondary">
-          <Toolbar disableGutters sx={{ justifyContent: "center"}}>
-         <MobileMenu handleOpenNavMenu={handleOpenNavMenu} anchorElNav={anchorElNav} handleCloseNavMenu={handleCloseNavMenu}/>
-            {/* this is the larger componet */}
+        <Toolbar disableGutters sx={{ justifyContent: "center"}}>
+         <MobileMenu anchorElNav={anchorElNav} handleCloseNavMenu={handleCloseNavMenu} handleOpenNavMenu={handleOpenNavMenu} />
+            {/* this is the larger component */}
             
             <Typography
               variant="h6"
               component="a"
-              href=""
+              href="/"
               sx={{
                 marginLeft: 5,
                 display: { xs: "flex", md: "flex" },
                 flexGrow: 1,
                 fontFamily: "monospace",
                 letterSpacing: ".3rem",
-                color: "inherit",
+                color: "white",
                 textDecoration: "none",
               }}
             >

@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MenuBar from "../../components/Menubar";
 import { trpc } from "../utils/trpc";
@@ -16,13 +17,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <MenuBar></MenuBar>
+      <MenuBar />
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
           <span className="text-black-500">Welcome to ZeroBit Consulting</span>
         </h1>
         <p className="text-2xl text-black-500">This stack uses:</p>
-        {/* <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-2 lg:w-2/3">
+        <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-2 lg:w-2/3">
           <TechnologyCard
             name="NextJS"
             description="The React framework for production"
@@ -43,11 +44,12 @@ const Home: NextPage = () => {
             description="End-to-end typesafe APIs made easy"
             documentation="https://trpc.io/"
           />
-        </div> */}
+        </div>
         <div className="pt-6 text-2xl text-black-500 flex justify-center items-center w-full">
           {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
         </div>
       </main>
+      <Footer />
     </>
   );
 };
