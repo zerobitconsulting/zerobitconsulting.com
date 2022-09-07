@@ -17,6 +17,7 @@ const About: NextPage = () => {
                     </h1>
                 </div>
                 <div className="items-left text-black">
+                    <h2 className="flex justify-center">Page is under construction</h2>
                 </div>
             </main>
             <Footer/>

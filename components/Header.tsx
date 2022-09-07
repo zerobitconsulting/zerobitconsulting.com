@@ -11,11 +11,6 @@ function AppHeader() {
 <meta name="description" content="Cheese Cake Builder" />
 <link rel="icon" href="/favicon.ico" />
 </Head>
-
-
-
-
-    
   );
 }
 
