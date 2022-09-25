@@ -1,9 +1,9 @@
 import { Typography } from "@mui/material";
 import { Container, typography } from "@mui/system";
 import type { NextPage } from "next";
+import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import MenuBar from "../../../components/Menubar";
-
 
 const Services: NextPage = () => {
     return (
@@ -17,8 +17,10 @@ const Services: NextPage = () => {
                     </h1>
                 </div>
                 <div className="items-left text-black">
+                    <h2 className="flex justify-center">Page is under construction</h2>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };

@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { Container, typography } from "@mui/system";
 import type { NextPage } from "next";
+import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import MenuBar from "../../../components/Menubar";
 
@@ -22,6 +23,7 @@ const Contact: NextPage = () => {
                     </h6>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };

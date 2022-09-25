@@ -1,3 +1,5 @@
+import React from "react";
+import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
@@ -35,18 +37,13 @@ export default function Footer() {
                 <h2>Follow us here: </h2>
               </Box>
               <Box>
-                <Link href='/' color='inherit' >
-                  Instagram
-                </Link>
+                <Link href='https://www.instagram.com/zerobit_consult/' color='inherit' target="_blank">
+                  <FaInstagram />
+                </Link> 
               </Box>
               <Box>
-                <Link href='/' color='inherit'>
-                  Facebook
-                </Link>
-              </Box>
-              <Box>
-                <Link href='/' color='inherit'>
-                  Twitter
+                <Link href='https://twitter.com' color='inherit' target="_blank">
+                  <FaTwitter />
                 </Link>
               </Box>
             </Grid>

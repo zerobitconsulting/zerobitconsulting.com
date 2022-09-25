@@ -22,7 +22,14 @@ const Home: NextPage = () => {
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
           <span className="text-black-500">Welcome to ZeroBit Consulting</span>
         </h1>
-        <p className="text-2xl text-black-500">This stack uses:</p>
+        <h4 className="mx-auto flex justify-center leading-normal">
+          The offical webpage is underconstruction but we hope to see you soon!
+        </h4>
+        <br/>
+        <h4 className="mx-auto flex justify-center leading-normal">
+          Feel free to contact us about any inquiries you may have.
+        </h4>
+        {/* <p className="text-2xl text-black-500">This stack uses:</p>
         <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-2 lg:w-2/3">
           <TechnologyCard
             name="NextJS"
@@ -47,7 +54,7 @@ const Home: NextPage = () => {
         </div>
         <div className="pt-6 text-2xl text-black-500 flex justify-center items-center w-full">
           {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
-        </div>
+        </div> */}
       </main>
       <Footer />
     </>
