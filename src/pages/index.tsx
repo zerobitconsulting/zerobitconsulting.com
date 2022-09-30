@@ -22,32 +22,9 @@ const Home: NextPage = () => {
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
           <span className="text-black-500">Welcome to ZeroBit Consulting</span>
         </h1>
-        <p className="text-2xl text-black-500">This stack uses:</p>
-        <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-2 lg:w-2/3">
-          <TechnologyCard
-            name="NextJS"
-            description="The React framework for production"
-            documentation="https://nextjs.org/"
-          />
-          <TechnologyCard
-            name="TypeScript"
-            description="Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale"
-            documentation="https://www.typescriptlang.org/"
-          />
-          <TechnologyCard
-            name="TailwindCSS"
-            description="Rapidly build modern websites without ever leaving your HTML"
-            documentation="https://tailwindcss.com/"
-          />
-          <TechnologyCard
-            name="tRPC"
-            description="End-to-end typesafe APIs made easy"
-            documentation="https://trpc.io/"
-          />
-        </div>
-        <div className="pt-6 text-2xl text-black-500 flex justify-center items-center w-full">
-          {hello.data ? <p>{hello.data.greeting}</p> : <p>Loading..</p>}
-        </div>
+        <p className="text-2xl text-red-500">Website is currently under construction</p>
+        <p className="text-2xl text-red-500">Please feel free to contact us for any inquiries</p>
+        <p className="text-2xl text-red-500">We hope to see you soon</p>
       </main>
       <Footer />
     </>
