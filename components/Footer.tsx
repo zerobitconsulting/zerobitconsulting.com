@@ -11,17 +11,17 @@ export default function Footer() {
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}> 
               <Box borderBottom={1} >Customer Support:</Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   phone number
                 </Link>
               </Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   email address
                 </Link>
               </Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   mailing address
                 </Link>
@@ -29,22 +29,17 @@ export default function Footer() {
             </Grid>
             <Grid item xs={12} sm={4}> 
               <Box borderBottom={1}>
-                <h2>Automating the smallest bit of work so you can focus on your customers</h2>
+                <p className="text-sm">Automating the smallest bit of work so you can focus on your customers</p>
               </Box>
               <Box>
                 <h2>Follow us here: </h2>
               </Box>
-              <Box>
-                <Link href='/' color='inherit' >
+              <Box className="text-sm">
+                <Link  href='https://www.instagram.com/zerobit_consult/' color='inherit' >
                   Instagram
                 </Link>
               </Box>
-              <Box>
-                <Link href='/' color='inherit'>
-                  Facebook
-                </Link>
-              </Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   Twitter
                 </Link>
@@ -52,17 +47,17 @@ export default function Footer() {
             </Grid>
             <Grid item xs={12} sm={4}> 
               <Box borderBottom={1}>Connect with us</Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   Blog
                 </Link>
               </Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   Privacy Policy
                 </Link>
               </Box>
-              <Box>
+              <Box className="text-sm">
                 <Link href='/' color='inherit'>
                   Careers
                 </Link>
