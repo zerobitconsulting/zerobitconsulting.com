@@ -40,7 +40,7 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box className="text-sm">
-                <Link href='/' color='inherit'>
+                <Link href='https://twitter.com/zerobit_consult' color='inherit'>
                   Twitter
                 </Link>
               </Box>
