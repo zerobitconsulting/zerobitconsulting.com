@@ -3,7 +3,6 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MenuBar from "../../components/Menubar";
-import { trpc } from "../utils/trpc";
 
 type TechnologyCardProps = {
   name: string;
@@ -12,8 +11,6 @@ type TechnologyCardProps = {
 };
 
 const Home: NextPage = () => {
-  const hello = trpc.useQuery(["example.hello", { text: "from tRPC" }]);
-
   return (
     <>
       <Header />
@@ -23,9 +20,9 @@ const Home: NextPage = () => {
           <span className="text-black-500">Welcome to ZeroBit Consulting</span>
         </h1>
         <h4 className="mx-auto flex justify-center leading-normal">
-          The offical webpage is underconstruction but we hope to see you soon!
+          The offical webpage is under construction but we hope to see you soon!
         </h4>
-        <br/>
+        <br />
         <h4 className="mx-auto flex justify-center leading-normal">
           Feel free to contact us about any inquiries you may have.
         </h4>
