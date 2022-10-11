@@ -1,14 +1,17 @@
 import { Typography, Box, IconButton, Menu, MenuItem } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 import { pages } from "../helpers/AppStrings";
-
 
 interface IMobileMenuProps {
   handleOpenNavMenu: () => void;
   anchorElNav: HTMLElement | null;
   handleCloseNavMenu: () => void;
 }
-const MobileMenu: React.FC<IMobileMenuProps> = ({ handleOpenNavMenu, anchorElNav, handleCloseNavMenu}) => {
+const MobileMenu: React.FC<IMobileMenuProps> = ({
+  handleOpenNavMenu,
+  anchorElNav,
+  handleCloseNavMenu,
+}) => {
   return (
     <>
       <Typography
@@ -67,5 +70,5 @@ const MobileMenu: React.FC<IMobileMenuProps> = ({ handleOpenNavMenu, anchorElNav
       </Box>
     </>
   );
-}
+};
 export default MobileMenu;
