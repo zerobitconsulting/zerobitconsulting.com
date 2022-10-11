@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -17,7 +17,6 @@ import { colors, createTheme, ThemeProvider } from "@mui/material";
 import { pages } from "../helpers/AppStrings";
 import MobileMenu from "./MobileMenu";
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -30,8 +29,12 @@ const theme = createTheme({
 });
 
 const MenuBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    null
+  );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -51,42 +54,45 @@ const MenuBar = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="sticky" color="secondary">
-        <Toolbar disableGutters sx={{ justifyContent: "center"}}>
-         <MobileMenu anchorElNav={anchorElNav} handleCloseNavMenu={handleCloseNavMenu} handleOpenNavMenu={handleOpenNavMenu} />
-            {/* this is the larger component */}
-            
-            <Typography
-              variant="h6"
-              component="a"
-              href="/"
-              sx={{
-                marginLeft: 5,
-                display: { xs: "flex", md: "flex" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
-              }}
-            >
-              ZeroBit Consulting
-            </Typography>
+        <Toolbar disableGutters sx={{ justifyContent: "center" }}>
+          <MobileMenu
+            anchorElNav={anchorElNav}
+            handleCloseNavMenu={handleCloseNavMenu}
+            handleOpenNavMenu={() => handleOpenNavMenu}
+          />
+          {/* this is the larger component */}
 
-            <Box sx={{ display: { xs: "none", md: "block" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ color: "black",  }}
-                >
-                  <Link key={page} href={page}>
-                    {page}
-                  </Link>
-                </Button>
-              ))}
-            </Box>
+          <Typography
+            variant="h6"
+            component="a"
+            href="/"
+            sx={{
+              marginLeft: 5,
+              display: { xs: "flex", md: "flex" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              letterSpacing: ".3rem",
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
+            ZeroBit Consulting
+          </Typography>
 
-          </Toolbar>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ color: "black" }}
+              >
+                <Link key={page} href={page}>
+                  {page}
+                </Link>
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
       </AppBar>
     </ThemeProvider>
   );

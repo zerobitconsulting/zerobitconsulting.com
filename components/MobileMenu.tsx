@@ -8,7 +8,7 @@ interface IMobileMenuProps {
   anchorElNav: HTMLElement | null;
   handleCloseNavMenu: () => void;
 }
-const MobileMenu: React.FC<IMobileMenuProps > = ({handleOpenNavMenu, anchorElNav, handleCloseNavMenu }) => {
+const MobileMenu: React.FC<IMobileMenuProps> = ({ handleOpenNavMenu, anchorElNav, handleCloseNavMenu}) => {
   return (
     <>
       <Typography
