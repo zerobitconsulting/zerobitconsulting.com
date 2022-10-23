@@ -58,7 +58,7 @@ const MenuBar = () => {
           <MobileMenu
             anchorElNav={anchorElNav}
             handleCloseNavMenu={handleCloseNavMenu}
-            handleOpenNavMenu={() => handleOpenNavMenu}
+            handleOpenNavMenu={handleOpenNavMenu}
           />
           {/* this is the larger component */}
 
