@@ -1,6 +1,7 @@
 import { Typography, Box, IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { pages } from "../helpers/AppStrings";
+import Link from "next/link";
 
 interface IMobileMenuProps {
   handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
@@ -63,7 +64,9 @@ const MobileMenu: React.FC<IMobileMenuProps> = ({
         >
           {pages.map((page) => (
             <MenuItem key={page} onClick={handleCloseNavMenu}>
-              <Typography textAlign="center">{page}</Typography>
+              <Link key={page} href={page}>
+                <Typography textAlign="center">{page}</Typography>
+              </Link>
             </MenuItem>
           ))}
         </Menu>
