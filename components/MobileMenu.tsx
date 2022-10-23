@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { pages } from "../helpers/AppStrings";
 
 interface IMobileMenuProps {
-  handleOpenNavMenu: () => void;
+  handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void;
   anchorElNav: HTMLElement | null;
   handleCloseNavMenu: () => void;
 }
