@@ -42,7 +42,7 @@ export default function Footer() {
                 </Link> 
               </Box>
               <Box>
-                <Link href='https://twitter.com' color='inherit' target="_blank">
+                <Link href='https://twitter.com/zerobit_consult' color='inherit' target="_blank">
                   <FaTwitter />
                 </Link>
               </Box>
