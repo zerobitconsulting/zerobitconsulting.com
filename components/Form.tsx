@@ -1,8 +1,7 @@
-import axios from "axios";
-import { setegid } from "process";
-import React, { useState } from "react";
+import axios from "axios"
+import { useState } from "react";
 import { RiLoader5Fill } from "react-icons/ri";
-import { validate } from "../../utils/validate";
+import { validate } from "../utils/validate";
 import Input from "./Input";
 import TextArea from "./TextArea";
 
@@ -20,9 +19,9 @@ export const Form = () => {
     });
     const [errors, setErrors] = useState<IErrors>({});
     const [loading, setLoading] = useState(false);
-    const [succes, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [messageState, setMessageState] = useState("");
-    const handlesSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const errors = validate(values);
         if (errors && Object.keys(errors).length > 0) {

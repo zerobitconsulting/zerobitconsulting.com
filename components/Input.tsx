@@ -8,7 +8,12 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = ({
-    id, name, label, placeholder, error = false, errorMessage = "",
+    id, 
+    name, 
+    label, 
+    placeholder, 
+    error = false, 
+    errorMessage = "",
     ...props
 }: InputProps) => {
     return (
@@ -16,12 +21,16 @@ const Input = ({
             <label className="mb-3 block" htmlFor={id}>
                 {label}
             </label>
-            <input {...props} type="text" id={id} name={name} placeholder={placeholder}
-            className="block w-full rounded-mb border-gray-400 py-3 pl-7 pr-12 focus:border-gray-500 sm:text-sm"
-            />
-            {error && <p className="mt-2 text-sm text-pink-600"></p>*{errorMessage}</p>}
+        <input
+        {...props}
+        type="text"
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        className="block w-full rounded-md border-gray-400 py-3 pl-7 pr-12 focus:border-gray-500 sm:text-sm"
+        />
+        {error && <p className="mt-2 text-sm text-pink-600">*{errorMessage}</p>}
         </div>
     );
 };
-
 export default Input;
