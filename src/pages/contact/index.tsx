@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
-import { Container, typography } from "@mui/system";
+import { Container, Row, Col } from "@mui/system";
+import (contactConfig) from "../content_option"
 import type { NextPage } from "next";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
