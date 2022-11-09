@@ -65,7 +65,7 @@ export const Form = () => {
     return (
         <form onSubmit={handleSubmit}>
             <Input
-                values={values.name}
+                value={values.name}
                 onChange={handleChange}
                 id="name"
                 name="name"
