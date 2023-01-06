@@ -8,13 +8,13 @@ export default async function handler (
     res: NextApiResponse<Data>
 ) {
     if (req.method === "POST") {
-        const {name, email, message, }: 
+        const {name, email, message}: 
         {name: string; email: string; message: string} = req.body;
-        const msg = 'Name: ${name}\r\n Email: ${email}\r\n Message: ${message}';
+        const msg = `Name: ${name}\r\n Email: ${email}\r\n Message: ${message}`;
         const data = {
-            to: "youremail@gmail.com", 
-            from: "yoursendgridemail@test.com", 
-            subject: '${name.toUpperCase()} sent you a message from Contact Form',
+            to: email, 
+            from: "david@zerobitconsulting.com", 
+            subject: `${name.toUpperCase()} sent you a message from Contact Form`,
             text: 'Email => ${email}',
             html: msg.replace(/\r\n/g, "<br>"),
         };
@@ -25,7 +25,7 @@ export default async function handler (
         catch (err) {
             res
                 .status(500)
-                .json({message: 'There was an error sending your message. ${err}' });
+                .json({message: `There was an error sending your message. ${err}` });
         }
     }
 }
