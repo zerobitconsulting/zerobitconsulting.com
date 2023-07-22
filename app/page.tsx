@@ -1,8 +1,6 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import MenuBar from "../../components/Menubar";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MenuBar from "../components/Menubar";
 
 type TechnologyCardProps = {
   name: string;
@@ -10,14 +8,13 @@ type TechnologyCardProps = {
   documentation: string;
 };
 
-const Home: NextPage = () => {
+export default function Page() {
   return (
     <>
       <Header />
       <MenuBar />
       <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
-
           <span className="text-black-500">Welcome to ZeroBit Consulting</span>
         </h1>
         <h4 className="mx-auto flex justify-center leading-normal">
@@ -57,7 +54,7 @@ const Home: NextPage = () => {
       <Footer />
     </>
   );
-};
+}
 
 const TechnologyCard = ({
   name,
@@ -79,5 +76,3 @@ const TechnologyCard = ({
     </section>
   );
 };
-
-export default Home;
